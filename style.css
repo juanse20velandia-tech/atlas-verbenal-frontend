@@ -1,0 +1,37 @@
+:root{font-family:"DM Sans",sans-serif;color:#192f28;background:#f3f2e9;--green:#143a2f;--muted:#52645b;--lime:#d4e99d;--line:#dce1d4}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+body{margin:0}
+button,input,select,textarea{font:inherit}
+button{cursor:pointer;color:inherit;border:1px solid var(--line);border-radius:9px;background:#fff;padding:.55rem .8rem}
+button:hover{background:#eaf1e0}
+a{color:inherit}
+:focus-visible{outline:3px solid #678e39;outline-offset:3px}
+.top{min-height:69px;display:flex;align-items:center;justify-content:space-between;padding:.75rem max(5vw,1rem);background:#fcfcf7;gap:1rem}
+.brand{text-decoration:none;font-weight:700;display:flex;align-items:center;gap:.5rem}
+.brand span{color:#e8f2cd;background:var(--green);width:31px;height:31px;display:grid;place-content:center;border-radius:50%;font-size:1.35rem}
+.top nav{display:flex;align-items:center;gap:1rem;font-size:.85rem}
+.top nav a{text-decoration:none}
+.hero{background:var(--green);color:#fff;overflow:hidden;position:relative}
+.hero::after{content:"";position:absolute;inset:0 0 0 48%;opacity:.3;background:repeating-radial-gradient(ellipse at 82% 95%,transparent 0 17px,#839e65 18px 19px,transparent 20px 36px);pointer-events:none}
+.hero-inner{position:relative;z-index:1;display:flex;align-items:end;justify-content:space-between;gap:2rem;padding:3rem 0 3.2rem}
+.hero-inner,.explore{width:min(1240px,90%);margin:auto}
+.eyebrow{color:#526c4a;font-size:.72rem;letter-spacing:.17em;font-weight:700;text-transform:uppercase;margin:0 0 .45rem}
+.hero .eyebrow,.hero h1 span{color:var(--lime)}
+h1,h2{font-family:"Instrument Serif",Georgia,serif;font-weight:400;margin:0;line-height:1}
+h1{font-size:clamp(4.5rem,10vw,8.5rem)}
+h2{font-size:clamp(2.2rem,5vw,3.6rem)}
+.intro{color:#e2ecdf;max-width:31rem;margin:.9rem 0 0}
+.hero-link{white-space:nowrap;color:#213627;background:var(--lime);border-radius:8px;text-decoration:none;padding:.75rem .95rem;font-weight:700}
+.hero-link span{margin-left:.6rem}
+.explore{padding:2rem 0 3rem;scroll-margin-top:1rem}
+.section-head{display:flex;justify-content:space-between;align-items:end;gap:1rem;margin-bottom:1.3rem}
+.search{min-width:min(280px,100%);font-size:.76rem;color:var(--muted)}
+label{display:grid;gap:.3rem;font-weight:600}
+input,textarea,select{width:100%;background:#fff;color:#192f28;border:1px solid #c9d4c5;padding:.56rem .7rem;border-radius:8px}
+footer{display:flex;justify-content:space-between;gap:1rem;padding:1.2rem max(5vw,1rem);background:#e4eadc;font-size:.8rem}
+@media(max-width:620px){
+  .top nav a{display:none}
+  .hero-inner,.section-head{display:grid;gap:1rem}
+  .hero-link{width:max-content}
+}
